@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[ISI NAMA] | Portofolio Mahasiswa</title>
+  <meta name="description" content="Portofolio [ISI NAMA], mahasiswa [ISI PROGRAM STUDI]: profil, keterampilan, proyek, pendidikan, dan kontak.">
+  <meta name="theme-color" content="#0C1022">
+
+  <!-- Font Plus Jakarta Sans (butuh internet; tanpa internet, font bawaan sistem dipakai) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap">
+
+  <!-- Tampilan: semua gaya ada di css/style.css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Menandai JavaScript aktif, agar animasi hanya berjalan jika JavaScript tersedia -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!--
+    CARA MENGISI: tekan Ctrl+F, cari "[ISI", lalu ganti setiap placeholder dengan data asli Anda.
+    Jangan mengisi data yang belum benar-benar Anda miliki. Hapus bagian yang tidak dipakai.
+
+    Tautan/tombol yang belum punya URL memakai class "is-disabled" tanpa href.
+    Setelah URL tersedia: tambahkan href="...", lalu hapus class "is-disabled" dan aria-disabled="true".
+  -->
+
+  <!-- Tautan untuk pengguna keyboard agar bisa melewati menu -->
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navigasi utama">
+      <!-- Logo: ganti NA dengan inisial Anda -->
+      <a class="logo" href="#home" aria-label="Ke bagian Home">NA</a>
+
+      <!-- Tombol hamburger untuk layar kecil (fungsinya diatur js/script.js) -->
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Buka menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HOME (Hero) ===== -->
+    <section class="section hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__greeting">Halo, saya</p>
+          <h1 class="hero__name" id="hero-title">[ISI NAMA]</h1>
+          <p class="hero__status">Mahasiswa [ISI PROGRAM STUDI], [ISI NAMA KAMPUS]</p>
+          <p class="hero__interest">Berminat di bidang [ISI BIDANG MINAT]</p>
+          <p class="hero__desc">[ISI DESKRIPSI SINGKAT, 1-2 KALIMAT]</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">Lihat Proyek</a>
+            <a class="btn btn--secondary" href="#contact">Hubungi Saya</a>
+          </div>
+
+          <ul class="hero__social">
+            <li><a class="social-link is-disabled" aria-disabled="true">GitHub</a></li>
+            <li><a class="social-link is-disabled" aria-disabled="true">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="hero__photo">
+          <!--
+            Foto: ganti isi .photo-frame dengan
+            <img src="assets/images/profile.jpg" alt="Foto [ISI NAMA]" width="320" height="320">
+            Selama belum ada foto, inisial dipakai sebagai avatar sementara.
+          -->
+          <div class="photo-frame">
+            <span class="photo-frame__initials" aria-hidden="true">NA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 class="section__title" id="about-title">About</h2>
+        <div class="about">
+          <div class="about__text">
+            <p>[ISI DESKRIPSI DIRI DAN LATAR BELAKANG PENDIDIKAN]</p>
+            <p>[ISI MINAT DI BIDANG TEKNOLOGI DAN KEGIATAN YANG RELEVAN]</p>
+            <p>[ISI TUJUAN BELAJAR DAN PENGEMBANGAN KARIER]</p>
+          </div>
+          <!-- Ringkasan singkat: daftar istilah (dl) berisi pasangan label (dt) dan isi (dd) -->
+          <dl class="about__facts">
+            <div><dt>Kampus</dt><dd>[ISI NAMA KAMPUS]</dd></div>
+            <div><dt>Program studi</dt><dd>[ISI PROGRAM STUDI]</dd></div>
+            <div><dt>Minat</dt><dd>[ISI BIDANG MINAT]</dd></div>
+            <div><dt>Tujuan</dt><dd>[ISI TUJUAN KARIER]</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 class="section__title" id="skills-title">Skills</h2>
+        <!-- Isi hanya teknologi yang benar-benar Anda kuasai. Tambah atau hapus <li> sesuai kebutuhan. -->
+        <div class="skills">
+          <div class="skills__row">
+            <h3 class="skills__category">Programming Languages</h3>
+            <ul class="chips">
+              <li class="chip">[ISI KEAHLIAN]</li>
+              <li class="chip">[ISI KEAHLIAN]</li>
+            </ul>
+          </div>
+          <div class="skills__row">
+            <h3 class="skills__category">Frontend Development</h3>
+            <ul class="chips">
+              <li class="chip">[ISI KEAHLIAN]</li>
+              <li class="chip">[ISI KEAHLIAN]</li>
+            </ul>
+          </div>
+          <div class="skills__row">
+            <h3 class="skills__category">Backend Development</h3>
+            <ul class="chips">
+              <li class="chip">[ISI KEAHLIAN]</li>
+              <li class="chip">[ISI KEAHLIAN]</li>
+            </ul>
+          </div>
+          <div class="skills__row">
+            <h3 class="skills__category">Database</h3>
+            <ul class="chips">
+              <li class="chip">[ISI KEAHLIAN]</li>
+              <li class="chip">[ISI KEAHLIAN]</li>
+            </ul>
+          </div>
+          <div class="skills__row">
+            <h3 class="skills__category">Tools and Software</h3>
+            <ul class="chips">
+              <li class="chip">[ISI KEAHLIAN]</li>
+              <li class="chip">[ISI KEAHLIAN]</li>
+            </ul>
+          </div>
+          <div class="skills__row">
+            <h3 class="skills__category">Soft Skills</h3>
+            <ul class="chips">
+              <li class="chip">[ISI KEAHLIAN]</li>
+              <li class="chip">[ISI KEAHLIAN]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 class="section__title" id="projects-title">Projects</h2>
+
+        <!--
+          Tombol filter. Nilai data-filter harus sama dengan data-category pada kartu di bawah.
+          "all" artinya tampilkan semua proyek.
+        -->
+        <div class="filter" role="group" aria-label="Filter proyek berdasarkan kategori">
+          <button type="button" class="filter__btn is-active" data-filter="all" aria-pressed="true">Semua</button>
+          <button type="button" class="filter__btn" data-filter="website" aria-pressed="false">Website</button>
+          <button type="button" class="filter__btn" data-filter="aplikasi" aria-pressed="false">Aplikasi</button>
+          <button type="button" class="filter__btn" data-filter="kuliah" aria-pressed="false">Proyek Kuliah</button>
+        </div>
+
+        <!--
+          Setiap proyek adalah satu <article class="card">. Salin satu kartu untuk menambah proyek.
+          Thumbnail: ganti isi .card__thumb dengan
+          <img src="assets/images/proyek-1.jpg" alt="Tampilan [ISI NAMA PROYEK]" loading="lazy">
+        -->
+        <div class="projects" id="project-grid">
+          <article class="card" data-category="website">
+            <div class="card__thumb"><span>[ISI THUMBNAIL]</span></div>
+            <div class="card__body">
+              <span class="chip chip--category">Website</span>
+              <h3 class="card__title">[ISI NAMA PROYEK 1]</h3>
+              <p class="card__desc">[ISI DESKRIPSI SINGKAT PROYEK]</p>
+              <ul class="chips">
+                <li class="chip">[ISI TEKNOLOGI]</li>
+              </ul>
+              <div class="card__actions">
+                <a class="btn btn--secondary btn--small is-disabled" aria-disabled="true">Lihat Demo</a>
+                <a class="btn btn--ghost btn--small is-disabled" aria-disabled="true">Lihat Kode</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="aplikasi">
+            <div class="card__thumb"><span>[ISI THUMBNAIL]</span></div>
+            <div class="card__body">
+              <span class="chip chip--category">Aplikasi</span>
+              <h3 class="card__title">[ISI NAMA PROYEK 2]</h3>
+              <p class="card__desc">[ISI DESKRIPSI SINGKAT PROYEK]</p>
+              <ul class="chips">
+                <li class="chip">[ISI TEKNOLOGI]</li>
+              </ul>
+              <div class="card__actions">
+                <a class="btn btn--secondary btn--small is-disabled" aria-disabled="true">Lihat Demo</a>
+                <a class="btn btn--ghost btn--small is-disabled" aria-disabled="true">Lihat Kode</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="kuliah">
+            <div class="card__thumb"><span>[ISI THUMBNAIL]</span></div>
+            <div class="card__body">
+              <span class="chip chip--category">Proyek Kuliah</span>
+              <h3 class="card__title">[ISI NAMA PROYEK 3]</h3>
+              <p class="card__desc">[ISI DESKRIPSI SINGKAT PROYEK]</p>
+              <ul class="chips">
+                <li class="chip">[ISI TEKNOLOGI]</li>
+              </ul>
+              <div class="card__actions">
+                <a class="btn btn--secondary btn--small is-disabled" aria-disabled="true">Lihat Demo</a>
+                <a class="btn btn--ghost btn--small is-disabled" aria-disabled="true">Lihat Kode</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pesan ini ditampilkan script.js jika sebuah kategori belum punya proyek -->
+        <p class="projects__empty" id="projects-empty" hidden>Belum ada proyek di kategori ini.</p>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION AND EXPERIENCE ===== -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <h2 class="section__title" id="education-title">Education</h2>
+        <div class="timelines">
+
+          <div>
+            <h3 class="timeline__heading">Pendidikan</h3>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="timeline__period">[ISI TAHUN MULAI] – [ISI TAHUN SELESAI]</p>
+                <h4 class="timeline__title">[ISI NAMA KAMPUS]</h4>
+                <p class="timeline__subtitle">[ISI PROGRAM STUDI]</p>
+                <p class="timeline__desc">[ISI DESKRIPSI SINGKAT]</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__period">[ISI TAHUN MULAI] – [ISI TAHUN SELESAI]</p>
+                <h4 class="timeline__title">[ISI NAMA SEKOLAH]</h4>
+                <p class="timeline__subtitle">[ISI JURUSAN]</p>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <h3 class="timeline__heading">Pengalaman</h3>
+            <!-- Magang, organisasi, atau kepanitiaan. Hapus bagian ini jika belum ada. -->
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="timeline__period">[ISI TAHUN MULAI] – [ISI TAHUN SELESAI]</p>
+                <h4 class="timeline__title">[ISI PERAN]</h4>
+                <p class="timeline__subtitle">[ISI NAMA ORGANISASI ATAU PERUSAHAAN]</p>
+                <p class="timeline__desc">[ISI KEGIATAN DAN TANGGUNG JAWAB]</p>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ===== CERTIFICATES AND ACHIEVEMENTS (opsional) =====
+      Bagian ini disembunyikan dengan atribut "hidden". Setelah Anda punya data asli
+      (sertifikat, kursus daring, penghargaan), hapus kata "hidden" pada tag <section> di bawah.
+    -->
+    <section class="section" id="certificates" aria-labelledby="certificates-title" hidden>
+      <div class="container">
+        <h2 class="section__title" id="certificates-title">Certificates and Achievements</h2>
+        <ul class="cert-list">
+          <li class="cert-item">
+            <h3 class="cert-item__title">[ISI NAMA SERTIFIKAT ATAU PENGHARGAAN]</h3>
+            <p class="cert-item__meta">[ISI PENERBIT], [ISI TAHUN]</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact__info">
+          <h2 class="section__title" id="contact-title">Contact</h2>
+          <p>[ISI KALIMAT AJAKAN, MISALNYA CARA TERBAIK MENGHUBUNGI ANDA]</p>
+          <ul class="contact__links">
+            <li><a class="contact-link is-disabled" aria-disabled="true">Email: [ISI EMAIL PROFESIONAL]</a></li>
+            <li><a class="contact-link is-disabled" aria-disabled="true">GitHub: [ISI URL GITHUB]</a></li>
+            <li><a class="contact-link is-disabled" aria-disabled="true">LinkedIn: [ISI URL LINKEDIN]</a></li>
+          </ul>
+        </div>
+
+        <!--
+          Formulir statis: tidak mengirim pesan sendiri. script.js memvalidasi isian, lalu membuka
+          aplikasi email lewat mailto: ke alamat di data-email. Ganti [ISI EMAIL PROFESIONAL] di sini.
+        -->
+        <form class="form" id="contact-form" data-email="[ISI EMAIL PROFESIONAL]" novalidate>
+          <div class="form__group">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+            <p class="form__error" id="name-error" aria-live="polite"></p>
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+            <p class="form__error" id="email-error" aria-live="polite"></p>
+          </div>
+          <div class="form__group">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+            <p class="form__error" id="message-error" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn btn--primary">Buka Aplikasi Email</button>
+          <p class="form__note">Pesan dibuka di aplikasi email Anda dan baru terkirim setelah Anda menekan Kirim di sana.</p>
+          <p class="form__status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <!-- Angka tahun diganti otomatis oleh script.js; "2026" hanya cadangan jika JavaScript mati -->
+      <p>&copy; <span id="year">2026</span> [ISI NAMA]. Seluruh hak cipta dilindungi.</p>
+      <ul class="footer__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Tombol kembali ke atas: dimunculkan script.js setelah halaman di-scroll -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Kembali ke atas" hidden>
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+      <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Interaksi: menu hamburger, filter proyek, validasi formulir, dll. -->
+  <script src="js/script.js"></script>
+</body>
+</html>
